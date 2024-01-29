@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$db_name = 'vitorlas';
+$db_name = 'autok';
 $db_username = 'root'; 
 $db_password = ''; 
 
