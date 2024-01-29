@@ -1,0 +1,68 @@
+body {
+    font-family: Arial;
+    background-color: white;
+}
+.navbar{
+    background: rgb(0,150,140);
+    color: black;
+    background: linear-gradient(270deg, rgb(92, 92, 188) 0%, rgb(171, 171, 243) 100%);
+    margin-bottom: 3%;
+}
+.navbar-brand{
+    font-weight: bolder;
+}
+#active{
+    font-weight: bolder;
+}
+#btn{
+    font-weight: bolder;
+    border-width: 2px;
+}
+h1{
+    margin-top: 200px;
+}
+.header {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-size: 500%;
+    text-align: center;
+    color: rgba(0,40,37,1);
+
+}
+.img{
+    width: 30%;
+    margin: 1%;
+}
+
+.row{
+    background: rgb(0,89,83);
+    background: radial-gradient(circle, rgb(92, 92, 188) 0%, rgb(171, 171, 243) 100%);
+    color: black;
+    margin: 3%;
+    border-radius: 20px;
+
+}
+
+#postcolumn { 
+    width: 100%;
+
+}
+  
+.footercolumn {
+    width: 100%;
+    float: right;
+    background-color: #dddefe;
+    padding: 10px;
+    color: rgba(0,40,37,1);
+}
+  
+.fakeimg {
+    background-color: rgb(255, 255, 255);
+    height: 65px;
+}
+#sor{
+    border-bottom: 2px solid rgba(0,40,37,1);
+    width: 30%;
+}
