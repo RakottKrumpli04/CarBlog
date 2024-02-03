@@ -1,8 +1,9 @@
 body {
     font-family: Arial;
+    background-color: rgb(236, 235, 225);
 }
 .navbar{
-    background-color: linear-gradient(270deg, #bbe9cf 100%, #9ba49e 0%);
+    background: linear-gradient(270deg, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%);
     margin-bottom: 3%;
 }
 .navbar-brand{
@@ -36,7 +37,7 @@ h1{
     color: black;
     margin: 3%;
     border-radius: 20px;
-    background-color: radial-gradient(circle, #bbe9cf 100%, #9ba49e 0%);
+    background: radial-gradient(circle, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%);
 }
 
 #postcolumn { 
@@ -48,6 +49,7 @@ h1{
     width: 100%;
     float: right;
     padding: 10px;
+    background: linear-gradient(270deg, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%);
 }
   
 .fakeimg {
@@ -55,6 +57,6 @@ h1{
     height: 65px;
 }
 #sor{
-    border-bottom: 2px solid rgba(0,40,37,1);
+    border-bottom: 2px solid black;
     width: 30%;
 }
