@@ -26,13 +26,13 @@
   <div class="collapse navbar-collapse justify-content-end">
     <ul class="navbar-nav">
         <li class="nav-item m-2">
-            <button class="btn btn-outline-dark" id="btn">Sötét mód</button>
+            <button class="btn btn-outline-dark" id="btn" onclick="valt()">Sötét mód</button>
         </li>
       </ul>
   </div>
 </nav>
 <div class="container">
-<p>modosítá</p>
+<h1>Cím</h1>
 </div>
 
 
@@ -53,5 +53,7 @@
     <h2 id="sor">Rólam</h2>
     <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
   </div>
+
+  <script src="javaScript.js"></script>
 </body>
 </html>
