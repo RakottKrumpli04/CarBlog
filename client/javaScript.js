@@ -1,25 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     const storedMode = localStorage.getItem("Mode");
-    if (storedMode!="Light" && storedMode!="Dark") { 
+    if (performance.navigation.type == 1) {
+        localStorage.clear(); 
         localStorage.setItem("Mode", "Light");
-        const storedMode = localStorage.getItem("Mode")
-        console.log(storedMode);
+        window.location.href = "index.php";
     }
-    if(storedMode == "Dark"){
+    if (storedMode == "Dark") {
         valt();
     }
 
-    const storedValue = localStorage.getItem("Mode");
-    if(storedValue == "Dark"){
-        localStorage.clear();
-        localStorage.setItem("Mode", "Dark");
-    }
-
-    else if(storedValue == "Light"){
-        localStorage.clear();
-        localStorage.setItem("Mode", "Light");
-    }
 });
+
 
 document.getElementById("btn").addEventListener("click", function () {
 
@@ -36,7 +28,6 @@ document.getElementById("btn").addEventListener("click", function () {
         valt();
     }
 });
-
 
 
 function valt(){
@@ -63,13 +54,13 @@ if (storedValue === "Dark"){
     document.querySelector(".navbar").style.background = "linear-gradient(270deg, #626a75 0%, #333c47 100%)";
 
     rows.forEach(row => {row.style.background = "radial-gradient(circle, #626a75 0%, #333c47 100%)";});
-    cimek.forEach(cim => {cim.style.color = "white"});
-    leirasok.forEach(leiras => {leiras.style.color = "white"});
-    szovegek.forEach(szoveg => {szoveg.style.color = "white"});
+    cimek.forEach(cim => {cim.style.color = "whitesmoke"});
+    leirasok.forEach(leiras => {leiras.style.color = "whitesmoke"});
+    szovegek.forEach(szoveg => {szoveg.style.color = "whitesmoke"});
 
     document.querySelector(".footercolumn").style.background = "linear-gradient(270deg, #626a75 0%, #333c47 100%)";
-    document.querySelector(".footercolumn").style.color = "white";
-    document.getElementById("sor").style.borderColor = "white";
+    document.querySelector(".footercolumn").style.color = "whitesmoke";
+    document.getElementById("sor").style.borderColor = "whitesmoke";
 }
 
 else if (storedValue === "Light"){
