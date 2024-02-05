@@ -11,42 +11,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const storedValue = localStorage.getItem("Mode");
     if(storedValue == "Dark"){
-
         localStorage.clear();
         localStorage.setItem("Mode", "Dark");
-
     }
 
     else if(storedValue == "Light"){
         localStorage.clear();
         localStorage.setItem("Mode", "Light");
-
     }
-
 });
 
 document.getElementById("btn").addEventListener("click", function () {
 
-
     const storedValue = localStorage.getItem("Mode");
     if(storedValue == "Dark"){
-
         localStorage.clear();
         localStorage.setItem("Mode", "Light");
         valt();
     }
 
-
     else if(storedValue == "Light"){
-
         localStorage.clear();
         localStorage.setItem("Mode", "Dark");
         valt();
     }
-    
 });
-
-
 
 
 
@@ -61,8 +50,6 @@ function valt(){
     const leirasok = document.querySelectorAll(".leiras");
     const szovegek = document.querySelectorAll(".szoveg");
     const btn = document.querySelector(".btn");
-
-
 
 if (storedValue === "Dark"){
 
@@ -84,7 +71,6 @@ if (storedValue === "Dark"){
     document.querySelector(".footercolumn").style.color = "white";
     document.getElementById("sor").style.borderColor = "white";
 }
-
 
 else if (storedValue === "Light"){
 
