@@ -11,7 +11,7 @@
 
 <body>
 <nav class="navbar fixed-top navbar-expand-sm navbar-light" id="navbar">
-  <a class="navbar-brand" href="#">Automotive News</a>
+  <a class="navbar-brand m-2" href="#">Automotive News</a>
   <div class="collapse navbar-collapse">
       <ul class="navbar-nav">
         <li class="nav-item m-2">
@@ -52,7 +52,7 @@
 
 
 <div class="footercolumn">
-    <h2 id="sor">Rólam</h2>
+    <h3 id="sor">Rólam</h2>
     <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
   </div>    
 <script src="javaScript.js"></script>

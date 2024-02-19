@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <title>Automotive News</title>
-    <link rel="stylesheet" href="style.css">
-
-    
+    <link rel="stylesheet" href="style.css">    
   </head>
 
 <body>
   <nav class="navbar fixed-top navbar-expand-sm navbar-light" id="navbar">
-    <a class="navbar-brand" href="#">Automotive News</a>
+    <a class="navbar-brand m-2" href="#">Automotive News</a>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
           <li class="nav-item m-2">
@@ -36,31 +34,18 @@
 
 <div class="container">
   <p class="fakeimg"></p>
-  <div class="col-md" id="postcolumn">
-      <div class="row">
-        <h2 class="cim">Cím</h2>
-        <h5 class="leiras">Cím leírás</h5>
-        <img class="img" src="img/Gemera.png" alt="Kép" style="width: 60%;">
-        <p class="szoveg">Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      </div>
-      <div class="row">
-        <h2 class="cim">Cím</h2>
-        <h5 class="leiras">Cím leírás</h5>
-        <img class="img" src="img/Gemera.png" alt="Kép" style="width: 50%;">
-        <p class="szoveg">Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      </div>
-      <div class="row">
-        <h2 class="cim">Cím</h2>
-        <h5 class="leiras">Cím leírás</h5>
-        <img class="img" src="img/Gemera.png" alt="Kép" style="width: 40%;">
-        <p class="szoveg">Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      </div>
+  <div class="col-md">
+    <div class="row">
+      <img class="img" src="img/Gemera.png" alt="Kép">
+      <h2 class="cim">Cím</h2>
+      <h5 class="leiras">Cím leírás</h5>
     </div>
+</div>
 </div>
 
 
 <div class="footercolumn">
-  <h2 id="sor">Rólam</h2>
+  <h3 id="sor">Rólam</h2>
   <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
 </div>
 <script src="javaScript.js"></script>
