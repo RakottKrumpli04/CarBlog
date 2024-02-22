@@ -32,17 +32,49 @@
     </div>
   </nav>
 
-<div class="container">
-  <p class="fakeimg"></p>
-  <div class="col-md">
+<div class="container">  
+  <p class="fakeimg" style="height: 100px"></p>
     <div class="row">
-      <img class="img" src="img/Gemera.png" alt="Kép">
-      <h2 class="cim">Cím</h2>
-      <h5 class="leiras">Cím leírás</h5>
+      <div class="col-md">
+        <h3>Szűrő</h3>
+      </div>
+      <div class="col-md-2">
+        <select id="select">
+          <option disabled selected style="display:none;">Choose an option</option>
+          <option value="1">Onsdflksddovinidfbpfve</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+      <button class="btn btn-outline-dark" id="btnSzuro">Szűrők törlése</button>
+      </div>
     </div>
-</div>
-</div>
+  <p class="fakeimg" style="height: 20px"></p>
 
+
+  <div class="flip-card" tabIndex="0">
+    <div class="flip-card-inner">
+
+      <div class="flip-card-front">
+        <div class="leirashatter">
+          <h5 class="leiras">Cím leírás</h1>
+        </div>
+      </div>
+
+      <div class="flip-card-back">
+        <div class="cimhatter">
+            <h1 class="cim">Cím</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <p class="fakeimg" style="height: 100px"></p>
+</div>
 
 <div class="footercolumn">
   <h3 id="sor">Rólam</h2>
