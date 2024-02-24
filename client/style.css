@@ -8,6 +8,17 @@ body {
 }
 .navbar-brand{
     font-weight: bolder;
+    user-select: none;
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+}
+.navbar-brand:hover{
+    cursor: default;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 #active{
     font-weight: bolder;
@@ -18,16 +29,15 @@ body {
     border-radius: 5px;
     background-color: rgb(197, 197, 175);
 }
-#select{
+.form-select{
     font-weight: bolder;
     border-radius: 5px;
     border: 2px solid black;
     background-color: rgb(197, 197, 175);
     height: 39px;
-    float: right;
 }
-select {
-	appearance: none;
+.form-select:hover{
+    cursor: pointer;
 }
 h2{
     text-align: center;
@@ -80,67 +90,65 @@ h5{
     margin-left: auto;
     margin-right: auto;
 }
-.flip-card {
+.fade-card {
     background-color: transparent;
     width: 70%;
     height: 350px;
     perspective: 1000px;
     margin: auto;
     border-radius: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
-.flip-card-inner {
-    position: relative;
+.fade-card .fade-card-back,
+.fade-card .fade-card-front {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     text-align: center;
     border-radius: 20px;
-    transition: transform 0.3s;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
 }
 
-.flip-card:focus {
-    outline: 0;
-}
-
-.flip-card:hover .flip-card-inner,
-.flip-card:focus .flip-card-inner{
-    transform: rotateX(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.flip-card-front {
-    background-image: url("img/Gemera.png");
-    background-size: cover;
-    background-position: center;
-    color: black;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border-radius: 20px;
-}
-
-.flip-card-back {
-    background-image: url("img/Gemera.png");
-    background-size: cover;
-    background-position: center;
-    color: black;
-    transform: rotateX(180deg);
+.fade-card .fade-card-back {
+    opacity: 0;
     z-index: 1;
+    background-image: url("img/Gemera.png");
+    background-size: cover;
+    background-position: center;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
 }
+
+.fade-card:hover .fade-card-back {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.fade-card .fade-card-front {
+    opacity: 1;
+    z-index: 2;
+    background-image: url("img/Gemera.png");
+    background-size: cover;
+    background-position: center;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.fade-card:hover .fade-card-front {
+    opacity: 0;
+    cursor: pointer;
+}
+
 
 .footercolumn {
     width: 100%;
@@ -156,4 +164,21 @@ h5{
 #sor{
     border-bottom: 2px solid black;
     width: 30%;
+}
+#torles path {
+    width: 100%;
+    height: 100%;
+}
+#bin{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: rgb(197, 197, 175);
+}
+#bin:hover{
+    cursor: pointer;
+}
+#elem{
+    margin-left: 3px;
 }

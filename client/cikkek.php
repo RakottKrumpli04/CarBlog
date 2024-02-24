@@ -9,7 +9,7 @@
 
 <body>
   <nav class="navbar fixed-top navbar-expand-sm navbar-light" id="navbar">
-    <a class="navbar-brand m-2" href="#">Automotive News</a>
+    <a class="navbar-brand m-2">Automotive News</a>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
           <li class="nav-item m-2">
@@ -33,41 +33,56 @@
   </nav>
 
 <div class="container">  
-  <p class="fakeimg" style="height: 100px"></p>
-    <div class="row">
-      <div class="col-md">
-        <h3>Szűrő</h3>
-      </div>
-      <div class="col-md-2">
-        <select id="select">
-          <option disabled selected style="display:none;">Choose an option</option>
-          <option value="1">Onsdflksddovinidfbpfve</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+  <p class="fakeimg" style="height: 72px"></p>
+    <div class="d-flex justify-content-end">
+      <div class="col-md-2" id="elem">
+        <select class="form-select" id="rendezes">
+          <option disabled selected style="display:none;">Rendezés</option>
+          <option value="1">Márka szerint</option>
+          <option value="2">Cikktípus szerint</option>
+          </optgroup>
         </select>
       </div>
-      <div class="col-md-2">
-      <button class="btn btn-outline-dark" id="btnSzuro">Szűrők törlése</button>
+      <div class="col-md-29" id="elem">
+        <select class="form-select" id="szures">
+          <option disabled selected style="display:none;">Szűrés</option>
+          <optgroup label="Márka szerint">
+          <option value="1">Ford</option>
+          <option value="2">Aston Martin</option>
+          <option value="3">Subaru</option>
+          </optgroup>
+          <optgroup label="Cikktípus szerint">
+          <option value="1">Autóajánló</option>
+          <option value="2">Cégismertető</option>
+          <option value="3">Autós történetek</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="col-md-1" id="elem">
+        <button class="btn btn-outline-dark" id="btnSzuro" style="width: 100%">Alkalmaz</button>
+      </div>
+      <div class="col-md-1" id="elem">
+        <div id="bin">
+          <img class="torol" id="torles" src="svg/btorles.svg" alt="Törlés">
+        </div>
+      </div>
       </div>
     </div>
   <p class="fakeimg" style="height: 20px"></p>
 
 
-  <div class="flip-card" tabIndex="0">
-    <div class="flip-card-inner">
-
-      <div class="flip-card-front">
-        <div class="leirashatter">
-          <h5 class="leiras">Cím leírás</h1>
-        </div>
+  <div class="fade-card" tabIndex="0">
+      <div class="fade-card-front">
+          <div class="leirashatter">
+            <h5 class="leiras">Cím leírás</h1>
+          </div>
       </div>
 
-      <div class="flip-card-back">
-        <div class="cimhatter">
+      <div class="fade-card-back">
+          <div class="cimhatter">
             <h1 class="cim">Cím</h5>
-        </div>
+          </div>
       </div>
-    </div>
   </div>
 
 
@@ -80,6 +95,7 @@
   <h3 id="sor">Rólam</h2>
   <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
 </div>
-<script src="javaScript.js"></script>
+
+<script src="cikkekJS.js"></script>
 </body>
 </html>
