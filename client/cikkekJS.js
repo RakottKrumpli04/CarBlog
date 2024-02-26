@@ -1,36 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-    const storedMode = localStorage.getItem("Mode");
-    if (performance.navigation.type == 1) {
-        localStorage.clear(); 
-        localStorage.setItem("Mode", "Light");
-        window.location.href = "index.php";
-    }
-    if (storedMode == "Dark") {
-        valt();
-    }
-
-});
-
-
-document.getElementById("btn").addEventListener("click", function () {
-
-    const storedValue = localStorage.getItem("Mode");
-    if(storedValue == "Dark"){
-        localStorage.clear();
-        localStorage.setItem("Mode", "Light");
-        valt();
-    }
-
-    else if(storedValue == "Light"){
-        localStorage.clear();
-        localStorage.setItem("Mode", "Dark");
-        valt();
-    }
-});
-
-
-function valt(){
+function cikkValt(){
     
     const elem = document.getElementById("btn");
     const btnSzuro = document.getElementById("btnSzuro");
@@ -74,7 +42,7 @@ if (storedValue === "Dark"){
     leirasok.forEach(leiras => {leiras.style.color = "whitesmoke"});
     szovegek.forEach(szoveg => {szoveg.style.color = "whitesmoke"});
     cimhatter.forEach(function(cimhatter) {cimhatter.style.backgroundColor = 'rgba(51, 60, 71, 0.85)';});
-    leirashatter.forEach(function(leirashatter) {leirashatter.style.backgroundColor = 'rgba(51, 60, 71, 0.8)';});
+    leirashatter.forEach(function(leirashatter) {leirashatter.style.backgroundColor = 'rgba(51, 60, 71, 0.9)';});
 
     document.querySelector(".footercolumn").style.background = "linear-gradient(270deg, #626a75 0%, #333c47 100%)";
     document.querySelector(".footercolumn").style.color = "whitesmoke";
@@ -109,8 +77,8 @@ else if (storedValue === "Light"){
     cimek.forEach(cim => {cim.style.color = "black"});
     leirasok.forEach(leiras => {leiras.style.color = "black"});
     szovegek.forEach(szoveg => {szoveg.style.color = "black"});
-    cimhatter.forEach(function(cimhatter) {cimhatter.style.backgroundColor = "rgba(197, 197, 175, 0.8)";});
-    leirashatter.forEach(function(leirashatter) {leirashatter.style.backgroundColor = "rgba(197, 197, 175, 0.8)";});
+    cimhatter.forEach(function(cimhatter) {cimhatter.style.backgroundColor = "rgba(197, 197, 175, 0.85)";});
+    leirashatter.forEach(function(leirashatter) {leirashatter.style.backgroundColor = "rgba(197, 197, 175, 0.9)";});
 
     document.querySelector(".footercolumn").style.background = "linear-gradient(270deg, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%)";
     document.querySelector(".footercolumn").style.color = "black";

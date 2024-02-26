@@ -1,36 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-    const storedMode = localStorage.getItem("Mode");
-    if (performance.navigation.type == 1) {
-        localStorage.clear(); 
-        localStorage.setItem("Mode", "Light");
-        window.location.href = "index.php";
-    }
-    if (storedMode == "Dark") {
-        valt();
-    }
-
-});
-
-
-document.getElementById("btn").addEventListener("click", function () {
-
-    const storedValue = localStorage.getItem("Mode");
-    if(storedValue == "Dark"){
-        localStorage.clear();
-        localStorage.setItem("Mode", "Light");
-        valt();
-    }
-
-    else if(storedValue == "Light"){
-        localStorage.clear();
-        localStorage.setItem("Mode", "Dark");
-        valt();
-    }
-});
-
-
-function valt(){
+function homeValt(){
     
     const elem = document.getElementById("btn");
     const storedValue = localStorage.getItem("Mode");

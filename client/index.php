@@ -14,13 +14,10 @@
   <div class="collapse navbar-collapse">
       <ul class="navbar-nav">
         <li class="nav-item m-2">
-            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link" href="index.php" onclick="home()">Home</a>
         </li>
         <li class="nav-item m-2">
-            <a class="nav-link" href="index.php?prog=cikkek.php" onclick="valaszt()">Bejegyzések</a>
-        </li>
-        <li class="nav-item m-2">
-            <a class="nav-link" href="#">C</a>
+            <a class="nav-link" href="index.php?prog=cikkek.php" onclick="cikk()">Cikkek</a>
         </li>
       </ul>
   </div>
@@ -59,7 +56,10 @@
     <h3 id="sor">Rólam</h2>
     <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
   </div>    
+<script src="javaScript.js"></script>
+<script src="mode.js"></script>
 <script src="indexJS.js"></script>
 <script src="cikkekJS.js"></script>
+
 </body>
 </html>

@@ -37,7 +37,7 @@
   <p class="fakeimg" style="height: 20px"></p>
 
 
-  <div class="fade-card" tabIndex="0">
+  <div id="cikkek">
 
   </div>
 
@@ -46,27 +46,24 @@
     function stat (data){
         console.log(data);
         for(let obj of data){
-            document.querySelector(".fade-card").innerHTML+=`
+            document.querySelector("#cikkek").innerHTML+=`
             <div class="fade-card" tabIndex="0">
-                <div class="fade-card-front">
+                <div class="fade-card-front" style="background-image: url('img/${obj.kep}');">
                   <div class="leirashatter">
                     <h5 class="leiras">${obj.roviden}</h5>
                   </div>
                 </div>
 
-                <div class="fade-card-back">
+                <div class="fade-card-back" style="background-image: url('img/${obj.kep}');">
                   <div class="cimhatter">
                     <h1 class="cim">${obj.cim}</h1>
                   </div>
                 </div>
               </div>
-            `             
-        `document.getElementById(".fade-card-front").style.backgroundImage = "url(img/${obj.kep})";`
-        `document.getElementById(".fade-card-back").style.backgroundImage = "url(img/${obj.kep})";`
+              <p class="fakeimg"></p>
 
+            `            
         }
-
-
     }
 </script>
 <p class="fakeimg" style="height: 100px"></p>
