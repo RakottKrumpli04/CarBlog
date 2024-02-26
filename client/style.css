@@ -119,7 +119,6 @@ h5{
 .fade-card .fade-card-back {
     opacity: 0;
     z-index: 1;
-    background-image: url("img/Gemera.png");
     background-size: cover;
     background-position: center;
     color: black;
@@ -136,7 +135,6 @@ h5{
 .fade-card .fade-card-front {
     opacity: 1;
     z-index: 2;
-    background-image: url("img/Gemera.png");
     background-size: cover;
     background-position: center;
     color: black;

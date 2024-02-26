@@ -56,10 +56,7 @@
     <h3 id="sor">Rólam</h2>
     <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
   </div>    
-<script src="javaScript.js"></script>
 <script src="mode.js"></script>
-<script src="indexJS.js"></script>
-<script src="cikkekJS.js"></script>
 
 </body>
 </html>

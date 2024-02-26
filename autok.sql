@@ -33,7 +33,7 @@ CREATE TABLE `autok` (
   `marka` varchar(15) DEFAULT NULL,
   `cim` varchar(25) DEFAULT NULL,
   `roviden` varchar(50) DEFAULT NULL,
-  `kep` varchar(25) DEFAULT NULL,
+  `kep` varchar(100) DEFAULT NULL,
   `fajta` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
@@ -42,15 +42,15 @@ CREATE TABLE `autok` (
 --
 
 INSERT INTO `autok` (`id`, `linkid`, `marka`, `cim`, `roviden`, `kep`, `fajta`) VALUES
-(1, 'darkhorse.php', 'Ford', 'Ford Mustang Dark Horse', 'Dark Horse, avagy az utolsó V8-as', 'FordMustangDarkHorse.jpg', 'auto'),
-(2, 'gt40.php', 'Ford', 'Ford GT40', 'Legenda volt a GT40, de miért is?', 'FordGT40.jpg', 'tortenet'),
-(3, 'ford.php', 'Ford', 'Ford Ismertető', 'Amit a Ford-ról tudni érdemes', 'Ford.jpg', 'ismerteto'),
-(4, 'db5.php', 'AstonMartin', 'Aston Martin DB5', 'Az autó, amiről mindenkinek James Bond jut eszébe', 'AstonMartinDB5.jpg', 'tortenet'),
-(5, 'valkyrie.php', 'AstonMartin', 'Aston Martin Valkyrie', 'A közúti autó, amit versenypályára terveztek', 'AstonMartinValkyrie.jpg', 'auto'),
-(6, 'astonmartin.php', 'AstonMartin', 'Aston Martin Ismertető', 'Amit az Aston Martin-ról tudni érdemes', 'AstonMartin.jpg', 'ismerteto'),
-(7, 'brz.php', 'Subaru', 'Subaru BRZ', 'A szegény ember sportautója ', 'SubaruBRZ.jpg', 'auto'),
-(8, 'imprezawrx.php', 'Subaru', 'Subaru Impreza WRX', 'Nincs rally Subaru nélkül - Impreza WRX STI', 'SubaruImprezaWRXSTI.jpg', 'tortenet'),
-(9, 'subaru.php', 'Subaru', 'Subaru Ismertető', 'Amit a Subaru-ról tudni érdemes', 'Subaru.jpg', 'ismerteto');
+(1, 'darkhorse.php', 'Ford', 'Ford Mustang Dark Horse', 'Dark Horse, avagy az utolsó V8-as', 'https://i.ibb.co/c2BvYf4/Ford-Mustang-Dark-Horse.jpg', 'auto'),
+(2, 'gt40.php', 'Ford', 'Ford GT40', 'Legenda volt a GT40, de miért is?', 'https://i.ibb.co/G9GgpjV/FordGT40.jpg', 'tortenet'),
+(3, 'ford.php', 'Ford', 'Ford Ismertető', 'Amit a Ford-ról tudni érdemes', 'https://i.ibb.co/mGd1Z3N/Ford.webp', 'ismerteto'),
+(4, 'db5.php', 'AstonMartin', 'Aston Martin DB5', 'Az autó, amiről mindenkinek James Bond jut eszébe', 'https://i.ibb.co/smRzQb1/Aston-Martin-DB5.webp', 'tortenet'),
+(5, 'valkyrie.php', 'AstonMartin', 'Aston Martin Valkyrie', 'A közúti autó, amit versenypályára terveztek', 'https://i.ibb.co/WPNTzDZ/Aston-Martin-Valkyrie.jpg', 'auto'),
+(6, 'astonmartin.php', 'AstonMartin', 'Aston Martin Ismertető', 'Amit az Aston Martin-ról tudni érdemes', 'https://i.ibb.co/zX3Bq1y/Aston-Martin.webp', 'ismerteto'),
+(7, 'brz.php', 'Subaru', 'Subaru BRZ', 'A szegény ember sportautója ', 'https://i.ibb.co/6FNHd2H/Subaru-BRZ.jpg', 'auto'),
+(8, 'imprezawrx.php', 'Subaru', 'Subaru Impreza WRX', 'Nincs rally Subaru nélkül - Impreza WRX STI', 'https://i.ibb.co/9cSByBQ/Subaru-Impreza-WRXSTI.jpg', 'tortenet'),
+(9, 'subaru.php', 'Subaru', 'Subaru Ismertető', 'Amit a Subaru-ról tudni érdemes', 'https://i.ibb.co/hdmd7k2/Subaru.webp', 'ismerteto');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
