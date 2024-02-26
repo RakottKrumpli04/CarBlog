@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <title>Automotive News</title>
     <link rel="stylesheet" href="style.css">
+    <script src="getData.js"></script>
 </head>
 
 <body>
@@ -13,10 +14,10 @@
   <div class="collapse navbar-collapse">
       <ul class="navbar-nav">
         <li class="nav-item m-2">
-            <a class="nav-link active" id="active" href="index.php">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item m-2">
-            <a class="nav-link" href="cikkek.php">Bejegyzések</a>
+            <a class="nav-link" href="index.php?prog=cikkek.php" onclick="valaszt()">Bejegyzések</a>
         </li>
         <li class="nav-item m-2">
             <a class="nav-link" href="#">C</a>
@@ -32,7 +33,12 @@
   </div>
 </nav>
 <div class="container">
-<h1>Cím</h1>
+  <?php
+    if(isset($_GET['prog'])) 
+      include $_GET['prog'];
+    else 
+      include 'fooldal.php';
+    ?>
 </div>
 
 
@@ -54,5 +60,6 @@
     <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
   </div>    
 <script src="indexJS.js"></script>
+<script src="cikkekJS.js"></script>
 </body>
 </html>
