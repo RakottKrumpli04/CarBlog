@@ -40,18 +40,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="footercolumn">
     <h3 id="sor">Rólam</h2>
     <p>Some text about me in culpa qui officia deserunt mollit anim..</p>

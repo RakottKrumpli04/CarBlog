@@ -14,11 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 function home(){
     localStorage.setItem("Page", "Home");
-    console.log(Page);
+
 }
 function cikk(){
     localStorage.setItem("Page", "Cikk");
-    console.log(Page);
 }
 
 document.getElementById("btn").addEventListener("click", function () {
@@ -169,13 +168,5 @@ function mode(){
             fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "rgb(236, 235, 225)";}); 
         } 
     }
-
-
-
-
-
-
-
-
-
 }
+
