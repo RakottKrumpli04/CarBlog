@@ -151,9 +151,9 @@ h5{
 
 .footercolumn {
     width: 100%;
-    float: right;
     padding: 10px;
     background: linear-gradient(270deg, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%);
+    margin-top: auto;
 }
   
 .fakeimg {
@@ -178,7 +178,7 @@ h5{
 #bin:hover{
     cursor: pointer;
 }
-#elem{
+.elem{
     margin-left: 3px;
     min-width: 93px;
 }

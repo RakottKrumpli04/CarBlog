@@ -42,7 +42,7 @@
 
 <div class="footercolumn">
     <h3 id="sor">Rólam</h2>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <p>Some text about me in culpa quilieowpőkojfiguerwpokqjiwrufjpqodkőefjiwrhpfjeoqkwdiorpehwfqodkőfejwrpihfelqokfőorjgwh  iwfo wnof inwoufw iofweo fiwnfouwifwnfiwo nfofficia deserunt mollit anim..</p>
   </div>    
 <script src="mode.js"></script>
 

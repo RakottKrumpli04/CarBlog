@@ -1,33 +1,20 @@
 <div class="container">  
   <p class="fakeimg" style="height: 72px"></p>
     <div class="d-flex justify-content-end">
-      <div class="col-md-2" id="elem">
-        <select class="form-select" id="rendezes">
-          <option disabled selected style="display:none;">Rendezés</option>
-          <option value="marka">Márka szerint</option>
-          <option value="fajta">Cikktípus szerint</option>
-          </optgroup>
+      <div class="col-md-2 elem">
+        <select class="form-select" id="marka">
+          <option value="0">Válassz egy márkát!</option>
         </select>
       </div>
-      <div class="col-md-2" id="elem">
-        <select class="form-select" id="szures">
-          <option disabled selected style="display:none;">Szűrés</option>
-          <optgroup label="Márka szerint">
-          <option value="Ford">Ford</option>
-          <option value="AstonMartin">Aston Martin</option>
-          <option value="Subaru">Subaru</option>
-          </optgroup>
-          <optgroup label="Cikktípus szerint">
-          <option value="auto">Autóajánló</option>
-          <option value="ismerteto">Cégismertető</option>
-          <option value="tortenet">Autós történetek</option>
-          </optgroup>
+      <div class="col-md-2 elem">
+        <select class="form-select" id="cikktipus">
+          <option value="0">Válassz egy cikktípust!</option>
         </select>
       </div>
-      <div class="col-md-1" id="elem">
+      <div class="col-md-1 elem">
         <button class="btn btn-outline-dark" id="btnSzuro" style="width: 100%">Alkalmaz</button>
       </div>
-      <div class="col-md-1" id="elem">
+      <div class="col-md-1 elem">
         <div id="bin">
           <img class="torol" id="torles" src="svg/btorles.svg" alt="Törlés">
         </div>
@@ -36,22 +23,32 @@
     </div>
   <p class="fakeimg" style="height: 20px"></p>
 
-
   <script>
-  var rendezes = 0;
-  var szures = 0;
-  document.getElementById("rendezes").addEventListener("change", function () {
-    rendezes= this.value;
-  });
 
+  getData('../server/marka.php', renderMarka);
+  function renderMarka(data){
+    for(let obj of data){
+    document.getElementById("marka").innerHTML+=`
+        <option>${obj.marka}</option>
+      `
+    }
+  }
 
-  document.getElementById("szures").addEventListener("change", function () {
-    szures = this.value;
-  });
-
+  getData('../server/cikktipus.php', renderTipus);
+  function renderTipus(data){
+    for(let obj of data){
+    document.getElementById("cikktipus").innerHTML+=`
+        <option>${obj.cikktipus}</option>
+      `
+    }
+  }
 
   document.getElementById("btnSzuro").addEventListener("click", function () {
-    getData('../server/allito.php', stat);
+
+    let marka = document.getElementById("marka").value;
+    let cikktipus = document.getElementById("cikktipus").value;
+
+    getData(`../server/szurtAdat.php?marka=${marka}&cikktipus=${cikktipus}`, stat);
     function stat (data){
 
         let elem = document.getElementById("cikkek");
