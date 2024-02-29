@@ -92,7 +92,6 @@ function mode(){
             const selectek = document.querySelectorAll(".form-select");
             const fakeimg = document.querySelectorAll(".fakeimg");
             const image = document.querySelector('#torles');
-            const storedMode = localStorage.getItem("Mode");
             const cimhatter = document.querySelectorAll(".cimhatter");
             const leirashatter = document.querySelectorAll(".leirashatter");
             const cim = document.querySelectorAll(".cim");

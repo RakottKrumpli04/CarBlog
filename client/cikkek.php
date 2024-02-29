@@ -43,11 +43,15 @@
   document.getElementById("rendezes").addEventListener("change", function () {
     rendezes= this.value;
   });
+
+
   document.getElementById("szures").addEventListener("change", function () {
     szures = this.value;
   });
+
+
   document.getElementById("btnSzuro").addEventListener("click", function () {
-    getData('../server/rendezes.php', stat);
+    getData('../server/allito.php', stat);
     function stat (data){
 
         let elem = document.getElementById("cikkek");
@@ -158,6 +162,5 @@
 </script>
 
 </div>
-<script src="cikkekJS.js"></script>
 </body>
 </html>
