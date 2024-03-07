@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `cikkek` (
   `id` int(1) DEFAULT NULL,
-  `Márka szerint` varchar(25) DEFAULT NULL,
-  `Cikktípus szerint` varchar(30) DEFAULT NULL,
+  `marka` varchar(25) DEFAULT NULL,
+  `cikktipus` varchar(30) DEFAULT NULL,
   `cim` varchar(40) DEFAULT NULL,
   `roviden` varchar(75) DEFAULT NULL,
   `kep` varchar(100) DEFAULT NULL
@@ -40,7 +40,7 @@ CREATE TABLE `cikkek` (
 -- A tábla adatainak kiíratása `autok`
 --
 
-INSERT INTO `cikkek` (`id`, `Márka szerint`, `Cikktípus szerint`, `cim`, `roviden`, `kep`) VALUES
+INSERT INTO `cikkek` (`id`, `marka`, `cikktipus`, `cim`, `roviden`, `kep`) VALUES
 (1, 'Ford', 'Autóajánló', 'Ford Mustang Dark Horse', 'Dark Horse, avagy az utolsó V8-as', 'https://i.ibb.co/c2BvYf4/Ford-Mustang-Dark-Horse.jpg'),
 (2, 'Ford', 'Autós történetek', 'Ford GT40', 'Legenda volt a GT40, de miért is?', 'https://i.ibb.co/G9GgpjV/FordGT40.jpg'),
 (3, 'Ford', 'Cégismertető', 'Ford Ismertető', 'Amit a Ford-ról tudni érdemes', 'https://i.ibb.co/mGd1Z3N/Ford.webp'),
