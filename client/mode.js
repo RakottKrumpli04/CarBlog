@@ -1,5 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    var screenWidth = window.innerWidth;
+    if (screenWidth <= 575) {
+        navbar.classList.remove('fixed-top');
+        document.getElementById('ures').style.display = 'none';
+
+    }
+    if (screenWidth > 575) {
+        navbar.classList.add('fixed-top');
+        document.getElementById('ures').style.display = 'block';
+    }
+
+
+
     const storedMode = localStorage.getItem("Mode");
     if (performance.navigation.type == 1) {
         localStorage.clear(); 
@@ -19,6 +32,9 @@ function home(){
 function cikk(){
     localStorage.setItem("Page", "Cikk");
 }
+function oldal(){
+    localStorage.setItem("Page", "Oldal");
+}
 
 document.getElementById("btn").addEventListener("click", function () {
 
@@ -33,6 +49,22 @@ document.getElementById("btn").addEventListener("click", function () {
         mode();
     }
 });
+window.addEventListener('resize', function() {
+
+    var screenWidth = window.innerWidth;
+
+    if (screenWidth <= 575) {
+        navbar.classList.remove('fixed-top');
+        document.getElementById('ures').style.display = 'none';
+
+    }
+    if (screenWidth > 575) {
+        navbar.classList.add('fixed-top');
+        document.getElementById('ures').style.display = 'block';
+    }
+});
+
+
 
 function mode(){
     const storedPage = localStorage.getItem("Page");
@@ -81,37 +113,19 @@ function mode(){
     }
 
 
-
-        if(storedPage === "Cikk"){
+    if(storedPage === "Oldal"){ 
 
             const elem = document.getElementById("btn");
-            const btnSzuro = document.getElementById("btnSzuro");
             const storedValue = localStorage.getItem("Mode");
             const navbar = document.querySelector(".navbar");
             const navlink = document.querySelector(".nav-link");
-            const selectek = document.querySelectorAll(".form-select");
             const fakeimg = document.querySelectorAll(".fakeimg");
-            const image = document.querySelector('#torles');
-            const cimhatter = document.querySelectorAll(".cimhatter");
-            const leirashatter = document.querySelectorAll(".leirashatter");
-            const cim = document.querySelectorAll(".cim");
-            const leiras = document.querySelectorAll(".leiras");
-        
         
         if (storedValue === "Dark"){
         
             elem.innerHTML = "Világos mód";
             elem.classList.replace("btn-outline-dark", "btn-outline-light");
-            btnSzuro.classList.replace("btn-outline-dark", "btn-outline-light");
             document.querySelector("#btn").style.backgroundColor = "#333c47";
-            document.querySelector("#btnSzuro").style.backgroundColor = "#333c47";
-            selectek.forEach(select => {select.style.color = "whitesmoke"});
-            selectek.forEach(select => {select.style.backgroundColor = "#333c47"});
-            selectek.forEach(select => {select.style.borderColor = "whitesmoke"});
-            image.src = 'svg/wtorles.svg';
-            document.querySelector("#bin").style.backgroundColor = "#333c47";
-            document.querySelector("#bin").style.color = "whitesmoke";
-            document.querySelector("#bin").style.borderColor = "whitesmoke";
         
             document.body.style.backgroundColor = "#1E2022";
         
@@ -124,48 +138,102 @@ function mode(){
             document.getElementById("sor").style.borderColor = "whitesmoke";
             fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "#1E2022";});
 
-            cim.forEach(cim => {cim.style.color = "whitesmoke"});
-            leiras.forEach(leiras => {leiras.style.color = "whitesmoke"});
-            cimhatter.forEach(function(cimhatter) {cimhatter.style.backgroundColor = 'rgba(51, 60, 71, 0.85)';});
-            leirashatter.forEach(function(leirashatter) {leirashatter.style.backgroundColor = 'rgba(51, 60, 71, 0.9)';});
-            fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "#1E2022";});
-            
         
         }
-        
+
         else if (storedValue === "Light"){
         
             elem.innerHTML = "Sötét mód";
             elem.classList.replace("btn-outline-light", "btn-outline-dark");
-            btnSzuro.classList.replace("btn-outline-light", "btn-outline-dark");
             document.querySelector("#btn").style.backgroundColor = "rgb(197, 197, 175)";
-            document.querySelector("#btnSzuro").style.backgroundColor = "rgb(197, 197, 175)";
-            selectek.forEach(select => {select.style.color = "black"});
-            selectek.forEach(select => {select.style.backgroundColor = "rgb(197, 197, 175)"});
-            selectek.forEach(select => {select.style.borderColor = "black"});
-            image.src = 'svg/btorles.svg';
-            document.querySelector("#bin").style.backgroundColor = "rgb(197, 197, 175)";
-            document.querySelector("#bin").style.color = "black";
-            document.querySelector("#bin").style.borderColor = "black";
-        
         
             document.body.style.backgroundColor = "rgb(236, 235, 225)";
         
             navbar.classList.replace("navbar-dark", "navbar-light");
             navlink.classList.replace("navbar-dark", "navbar-light");
             document.querySelector(".navbar").style.background = "linear-gradient(270deg, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%)";
-
+        
             document.querySelector(".footercolumn").style.background = "linear-gradient(270deg, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%)";
             document.querySelector(".footercolumn").style.color = "black";
             document.getElementById("sor").style.borderColor = "black";
-            fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "rgb(236, 235, 225)";});
-            
-            cim.forEach(cim => {cim.style.color = "black"});
-            leiras.forEach(leiras => {leiras.style.color = "black"});
-            cimhatter.forEach(function(cimhatter) {cimhatter.style.backgroundColor = "rgba(197, 197, 175, 0.85)";});
-            leirashatter.forEach(function(leirashatter) {leirashatter.style.backgroundColor = "rgba(197, 197, 175, 0.9)";});
             fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "rgb(236, 235, 225)";}); 
+
         } 
-    }
+}
+
+
+        if(storedPage === "Cikk"){
+
+            const elem = document.getElementById("btn");
+            const btnSzuro = document.getElementById("btnSzuro");
+            const storedValue = localStorage.getItem("Mode");
+            const navbar = document.querySelector(".navbar");
+            const navlink = document.querySelector(".nav-link");
+            const selectek = document.querySelectorAll(".form-select");
+            const fakeimg = document.querySelectorAll(".fakeimg");
+            const cimhatter = document.querySelectorAll(".cimhatter");
+            const leirashatter = document.querySelectorAll(".leirashatter");
+            const cim = document.querySelectorAll(".cim");
+            const leiras = document.querySelectorAll(".leiras");
+        
+        
+            if (storedValue === "Dark"){
+            
+                elem.innerHTML = "Világos mód";
+                elem.classList.replace("btn-outline-dark", "btn-outline-light");
+                btnSzuro.classList.replace("btn-outline-dark", "btn-outline-light");
+                document.querySelector("#btn").style.backgroundColor = "#333c47";
+                document.querySelector("#btnSzuro").style.backgroundColor = "#333c47";
+                selectek.forEach(select => {select.style.color = "whitesmoke"});
+                selectek.forEach(select => {select.style.backgroundColor = "#333c47"});
+                selectek.forEach(select => {select.style.borderColor = "whitesmoke"});
+            
+                document.body.style.backgroundColor = "#1E2022";
+            
+                navbar.classList.replace("navbar-light", "navbar-dark");
+                navlink.classList.replace("navbar-light", "navbar-dark");
+                document.querySelector(".navbar").style.background = "linear-gradient(270deg, #626a75 0%, #333c47 100%)";
+            
+                document.querySelector(".footercolumn").style.background = "linear-gradient(270deg, #626a75 0%, #333c47 100%)";
+                document.querySelector(".footercolumn").style.color = "whitesmoke";
+                document.getElementById("sor").style.borderColor = "whitesmoke";
+
+                cim.forEach(cim => {cim.style.color = "whitesmoke"});
+                leiras.forEach(leiras => {leiras.style.color = "whitesmoke"});
+                cimhatter.forEach(function(cimhatter) {cimhatter.style.backgroundColor = 'rgba(51, 60, 71, 0.85)';});
+                leirashatter.forEach(function(leirashatter) {leirashatter.style.backgroundColor = 'rgba(51, 60, 71, 0.9)';});
+                fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "#1E2022";});
+
+            
+            }
+
+            else if (storedValue === "Light"){
+            
+                elem.innerHTML = "Sötét mód";
+                elem.classList.replace("btn-outline-light", "btn-outline-dark");
+                btnSzuro.classList.replace("btn-outline-light", "btn-outline-dark");
+                document.querySelector("#btn").style.backgroundColor = "rgb(197, 197, 175)";
+                document.querySelector("#btnSzuro").style.backgroundColor = "rgb(197, 197, 175)";
+                selectek.forEach(select => {select.style.color = "black"});
+                selectek.forEach(select => {select.style.backgroundColor = "rgb(197, 197, 175)"});
+                selectek.forEach(select => {select.style.borderColor = "black"});
+            
+                document.body.style.backgroundColor = "rgb(236, 235, 225)";
+            
+                navbar.classList.replace("navbar-dark", "navbar-light");
+                navlink.classList.replace("navbar-dark", "navbar-light");
+                document.querySelector(".navbar").style.background = "linear-gradient(270deg, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%)";
+
+                document.querySelector(".footercolumn").style.background = "linear-gradient(270deg, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%)";
+                document.querySelector(".footercolumn").style.color = "black";
+                document.getElementById("sor").style.borderColor = "black";
+
+                cim.forEach(cim => {cim.style.color = "black"});
+                leiras.forEach(leiras => {leiras.style.color = "black"});
+                cimhatter.forEach(function(cimhatter) {cimhatter.style.backgroundColor = "rgba(197, 197, 175, 0.85)";});
+                leirashatter.forEach(function(leirashatter) {leirashatter.style.backgroundColor = "rgba(197, 197, 175, 0.9)";});
+                fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "rgb(236, 235, 225)";}); 
+            } 
+    }   
 }
 

@@ -11,7 +11,7 @@
 <body>
 <nav class="navbar fixed-top navbar-expand-sm navbar-light" id="navbar">
   <a class="navbar-brand m-2">Automotive News</a>
-  <div class="collapse navbar-collapse">
+  <div class="navbar-collapse">
       <ul class="navbar-nav">
         <li class="nav-item m-2">
             <a class="nav-link" href="index.php" onclick="home()">Home</a>
@@ -21,7 +21,7 @@
         </li>
       </ul>
   </div>
-  <div class="collapse navbar-collapse justify-content-end">
+  <div class="navbar-collapse justify-content-end">
     <ul class="navbar-nav">
         <li class="nav-item m-2">
             <button class="btn btn-outline-dark" id="btn">Sötét mód</button>
