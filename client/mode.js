@@ -31,11 +31,9 @@ function home(){
 }
 function cikk(){
     localStorage.setItem("Page", "Cikk");
+
 }
-function oldal(){
-    localStorage.setItem("Page", "Oldal");
-    
-}
+
 
 document.getElementById("btn").addEventListener("click", function () {
 
@@ -69,7 +67,10 @@ window.addEventListener('resize', function() {
 
 function mode(){
     const storedPage = localStorage.getItem("Page");
-    if(storedPage === "Home"){ 
+
+
+    if(storedPage === "Home"){
+
 
             const elem = document.getElementById("btn");
             const storedValue = localStorage.getItem("Mode");
@@ -121,7 +122,9 @@ function mode(){
             const navbar = document.querySelector(".navbar");
             const navlink = document.querySelector(".nav-link");
             const fakeimg = document.querySelectorAll(".fakeimg");
-        
+            const cikkelem = document.querySelectorAll(".cikkelem");
+
+
         if (storedValue === "Dark"){
         
             elem.innerHTML = "Világos mód";
@@ -138,6 +141,10 @@ function mode(){
             document.querySelector(".footercolumn").style.color = "whitesmoke";
             document.getElementById("sor").style.borderColor = "whitesmoke";
             fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "#1E2022";});
+            cikkelem.forEach(function(cikkelem) {cikkelem.style.color = "whitesmoke";});
+
+
+
 
         
         }
@@ -157,13 +164,17 @@ function mode(){
             document.querySelector(".footercolumn").style.background = "linear-gradient(270deg, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%)";
             document.querySelector(".footercolumn").style.color = "black";
             document.getElementById("sor").style.borderColor = "black";
-            fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "rgb(236, 235, 225)";}); 
+            fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "rgb(236, 235, 225)";});
+            cikkelem.forEach(function(cikkelem) {cikkelem.style.color = "black";});
+
+
 
         } 
 }
 
 
         if(storedPage === "Cikk"){
+
 
             const elem = document.getElementById("btn");
             const btnSzuro = document.getElementById("btnSzuro");
