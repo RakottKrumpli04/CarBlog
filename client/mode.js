@@ -34,6 +34,7 @@ function cikk(){
 }
 function oldal(){
     localStorage.setItem("Page", "Oldal");
+    
 }
 
 document.getElementById("btn").addEventListener("click", function () {

@@ -1,7 +1,4 @@
-<div class="container">  
-    <div class="div">
-      <p class="fakeimg" id="ures" style="height: 72px"></p>
-    </div>
+<div class="container"> 
     <div class="d-flex justify-content-end">
       <div class="col-md-2 elem">
         <select class="form-select" id="marka">
@@ -55,6 +52,7 @@
         container.appendChild(cikkek);
 
         for(let obj of data){
+          getData(`../server/cikkoldal.php?cikkszam=${obj.id}`, cikk);
             document.querySelector("#cikkek").innerHTML+=`
             <a href="index.php?prog=cikkoldal.php" onclick="oldal()">
               <div class="fade-card" tabIndex="0">
@@ -90,7 +88,7 @@
           leirashatter.forEach(function(leirashatter) {leirashatter.style.backgroundColor = 'rgba(51, 60, 71, 0.9)';});
           fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "#1E2022";});
         }
-        else if(storedMode === "Dark"){
+        else if(storedMode === "Light"){
 
           cim.forEach(cim => {cim.style.color = "black"});
           leiras.forEach(leiras => {leiras.style.color = "black"});
@@ -111,6 +109,8 @@
       container.appendChild(cikkek);
 
         for(let obj of data){
+          getData(`../server/cikkoldal.php?cikkszam=${obj.id}`, cikk);
+
             document.querySelector("#cikkek").innerHTML+=`
             <a href="index.php?prog=cikkoldal.php" onclick="oldal()">
               <div class="fade-card" tabIndex="0">
