@@ -1,16 +1,17 @@
 <div class="container"> 
-    <div class="d-flex justify-content-end">
-      <div class="col-md-2 elem">
+  <h2 class="focim">Cikkek tárháza</h2>
+    <div class="row-md d-flex justify-content-end szuro">
+      <div class="col-2.5 elem">
         <select class="form-select" id="marka">
           <option value="0">Válassz egy márkát!</option>
         </select>
       </div>
-      <div class="col-md-2.5 elem">
+      <div class="col-2.5 elem">
         <select class="form-select" id="cikktipus">
           <option value="0">Válassz egy cikktípust!</option>
         </select>
       </div>
-      <div class="col-md-1 elem">
+      <div class="col-1 elem">
         <button class="btn btn-outline-dark" id="btnSzuro" style="width: 100%">Alkalmaz</button>
       </div>
       </div>
@@ -53,9 +54,8 @@
 
 
         for(let obj of data){
-          let alma = obj.id;
             document.querySelector("#cikkek").innerHTML+=`
-            <a href="index.php?prog=cikkoldal.php" onclick="oldal(${obj.id})">
+            <a href="index.php?prog=cikkoldal.php&id=${obj.id}" onclick="oldal()">
               <div class="fade-card" tabIndex="0">
                   <div class="fade-card-front" style="background-image: url('${obj.borito}');">
                     <div class="leirashatter">
@@ -109,7 +109,7 @@
 
         for(let obj of data){
             document.querySelector("#cikkek").innerHTML+=`
-            <a href="index.php?prog=cikkoldal.php" onclick="oldal(${obj.id})">
+            <a href="index.php?prog=cikkoldal.php&id=${obj.id}" onclick="oldal()">
               <div class="fade-card" tabIndex="0">
                   <div class="fade-card-front" style="background-image: url('${obj.borito}');">
                     <div class="leirashatter">
@@ -155,10 +155,7 @@
 
     }
 
-function oldal(id) {
-      localStorage.setItem("Page", "Oldal");
-      
-}
+
 </script>
 </div>
 </body>

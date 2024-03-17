@@ -4,7 +4,6 @@ body {
 }
 .navbar{
     background: linear-gradient(270deg, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%);
-    margin-bottom: 3%;
 }
 .navbar-brand{
     font-weight: bolder;
@@ -40,21 +39,117 @@ body {
 .form-select:hover{
     cursor: pointer;
 }
-h2{
+.fooldal{
     text-align: center;
+    font-size: 500%;
+    padding: 70px;
+}
+h2{
+    margin-left: 10%;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    font-size: 320%;
+}
+h3{
+    margin-top: 40px;
+    margin-left: 13%;
+    font-size: 250%;
+}
+h4{
+    font-size: 180%;
 }
 h5{
     margin: 2%;
+}
+.bevezeto{
+    text-align: justify;
+    font-size: 130%;
+    line-height: 1.5;
 }
 .container{
     align-items: center;
 }
 .row{
-    width: 85%;
     display: flex;
+    width: 90%;
     margin: auto;
+    height: 80%;
+    padding: 20px;
+}
+.col-md{
+    margin: 20px;
+}
+.adstart{
+    font-size: 150%;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    border-bottom: 2px dashed rgb(197, 197, 175);
+    border-width: 60%;
+    width: 50%;
+}
+.adend{
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    border-top: 2px dashed rgb(197, 197, 175);
+    width: 50%;
+}
+.fade-card-main {
+    background-color: transparent;
+    height: 200px;
+    perspective: 1000px;
+    margin: auto;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
+.fade-card-main .fade-card-back,
+.fade-card-main .fade-card-front {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 20px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.fade-card-main .fade-card-back {
+    opacity: 0;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fade-card-main:hover .fade-card-back {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.fade-card-main .fade-card-front {
+    opacity: 1;
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.fade-card-main:hover .fade-card-front {
+    opacity: 0;
+    cursor: pointer;
+}
 .leirashatter{
     background-color: rgba(197, 197, 175, 0.9);
     width: 100%;
@@ -91,10 +186,10 @@ h5{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 20px;
 }
 .fade-card {
     background-color: transparent;
-    width: 70%;
     height: 350px;
     perspective: 1000px;
     margin: auto;
@@ -165,21 +260,15 @@ h5{
     border-bottom: 2px solid black;
     width: 30%;
 }
-#torles path {
-    width: 100%;
-    height: 100%;
-}
-#bin{
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    border: 2px solid black;
-    background-color: rgb(197, 197, 175);
-}
-#bin:hover{
-    cursor: pointer;
+.szuro{
+    margin-bottom: 40px;
 }
 .elem{
     margin-left: 3px;
     min-width: 93px;
+}
+.cikkelem{
+    width: 80%;
+    margin: auto;
+    text-align: justify;
 }

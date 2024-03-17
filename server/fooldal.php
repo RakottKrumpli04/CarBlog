@@ -1,7 +1,7 @@
 <?php 
 require_once "db.php";
-$id = $_GET['id'];
-$sql = "SELECT * FROM cikkek WHERE id='{$id}'";
+$sql="SELECT id, cim, roviden, borito FROM cikkek ORDER BY rand() limit 3";
 $stmt = $db->query($sql);
 echo json_encode($stmt->fetchAll());
 ?>
+

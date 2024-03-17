@@ -9,7 +9,7 @@
 
 <body>
 <nav class="navbar fixed-top navbar-expand-sm navbar-light" id="navbar">
-  <a class="navbar-brand m-2">Automotive News</a>
+  <a class="navbar-brand m-2">AutóMánia</a>
   <div class="navbar-collapse">
       <ul class="navbar-nav">
         <li class="nav-item m-2">
@@ -29,23 +29,18 @@
   </div>
 </nav>
 <div class="div">
-    <p class="fakeimg" id="ures" style="height: 72px"></p>
+    <p class="fakeimg" id="ures" style="height: 56px"></p>
 </div>
-<div class="container">
   <?php
     if(isset($_GET['prog'])) 
       include $_GET['prog'];
     else 
       include 'fooldal.php';
     ?>
-</div>
 
 
 
-<div class="footercolumn">
-    <h3 id="sor">Rólam</h2>
-    <p>Some text about me in culpa quilieowpőkojfiguerwpokqjiwrufjpqodkőefjiwrhpfjeoqkwdiorpehwfqodkőfejwrpihfelqokfőorjgwh  iwfo wnof inwoufw iofweo fiwnfouwifwnfiwo nfofficia deserunt mollit anim..</p>
-  </div>    
+   
 <script src="mode.js"></script>
 <link rel="stylesheet" href="style.css">
 </body>

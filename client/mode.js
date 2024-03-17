@@ -33,6 +33,10 @@ function cikk(){
     localStorage.setItem("Page", "Cikk");
 
 }
+function oldal() {
+    localStorage.setItem("Page", "Oldal");
+
+}
 
 
 document.getElementById("btn").addEventListener("click", function () {
@@ -76,6 +80,15 @@ function mode(){
             const storedValue = localStorage.getItem("Mode");
             const navbar = document.querySelector(".navbar");
             const navlink = document.querySelector(".nav-link");
+            const cimhatter = document.querySelectorAll(".cimhatter");
+            const leirashatter = document.querySelectorAll(".leirashatter");
+            const fakeimg = document.querySelectorAll(".fakeimg");
+            const cim = document.querySelectorAll(".cim");
+            const leiras = document.querySelectorAll(".leiras");
+            const fooldal = document.querySelector(".fooldal");
+            const bevezeto = document.querySelector(".bevezeto");
+            const adstart = document.querySelector(".adstart");
+            const adend = document.querySelector(".adend");
         
         if (storedValue === "Dark"){
         
@@ -92,6 +105,20 @@ function mode(){
             document.querySelector(".footercolumn").style.background = "linear-gradient(270deg, #626a75 0%, #333c47 100%)";
             document.querySelector(".footercolumn").style.color = "whitesmoke";
             document.getElementById("sor").style.borderColor = "whitesmoke";
+
+            cim.forEach(cim => {cim.style.color = "whitesmoke"});
+            leiras.forEach(leiras => {leiras.style.color = "whitesmoke"});
+            cimhatter.forEach(function(cimhatter) {cimhatter.style.backgroundColor = 'rgba(51, 60, 71, 0.85)';});
+            leirashatter.forEach(function(leirashatter) {leirashatter.style.backgroundColor = 'rgba(51, 60, 71, 0.9)';});
+            fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "#1E2022";});
+
+            fooldal.style.color = "whitesmoke";
+            bevezeto.style.color = "whitesmoke";
+            adstart.style.color = "whitesmoke";
+            adstart.style.borderColor = "#333c47";
+            adend.style.borderColor = "#333c47";
+
+
         
         }
         
@@ -111,6 +138,17 @@ function mode(){
             document.querySelector(".footercolumn").style.color = "black";
             document.getElementById("sor").style.borderColor = "black";
 
+            cim.forEach(cim => {cim.style.color = "black"});
+            leiras.forEach(leiras => {leiras.style.color = "black"});
+            cimhatter.forEach(function(cimhatter) {cimhatter.style.backgroundColor = "rgba(197, 197, 175, 0.85)";});
+            leirashatter.forEach(function(leirashatter) {leirashatter.style.backgroundColor = "rgba(197, 197, 175, 0.9)";});
+            fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "rgb(236, 235, 225)";}); 
+
+            fooldal.style.color = "black";
+            bevezeto.style.color = "black";
+            adstart.style.color = "black";
+            adstart.style.borderColor = "rgb(197, 197, 175)";
+            adend.style.borderColor = "rgb(197, 197, 175)";
         } 
     }
 
@@ -123,6 +161,8 @@ function mode(){
             const navlink = document.querySelector(".nav-link");
             const fakeimg = document.querySelectorAll(".fakeimg");
             const cikkelem = document.querySelectorAll(".cikkelem");
+            const focim = document.querySelectorAll(".focim");
+
 
 
         if (storedValue === "Dark"){
@@ -137,13 +177,10 @@ function mode(){
             navlink.classList.replace("navbar-light", "navbar-dark");
             document.querySelector(".navbar").style.background = "linear-gradient(270deg, #626a75 0%, #333c47 100%)";
         
-            document.querySelector(".footercolumn").style.background = "linear-gradient(270deg, #626a75 0%, #333c47 100%)";
-            document.querySelector(".footercolumn").style.color = "whitesmoke";
-            document.getElementById("sor").style.borderColor = "whitesmoke";
+
             fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "#1E2022";});
             cikkelem.forEach(function(cikkelem) {cikkelem.style.color = "whitesmoke";});
-
-
+            focim.forEach(function(focim) { focim.style.color = "whitesmoke"; });
 
 
         
@@ -161,11 +198,10 @@ function mode(){
             navlink.classList.replace("navbar-dark", "navbar-light");
             document.querySelector(".navbar").style.background = "linear-gradient(270deg, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%)";
         
-            document.querySelector(".footercolumn").style.background = "linear-gradient(270deg, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%)";
-            document.querySelector(".footercolumn").style.color = "black";
-            document.getElementById("sor").style.borderColor = "black";
             fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "rgb(236, 235, 225)";});
             cikkelem.forEach(function(cikkelem) {cikkelem.style.color = "black";});
+            focim.forEach(function(focim) { focim.style.color = "black"; });
+
 
 
 
@@ -186,6 +222,7 @@ function mode(){
             const cimhatter = document.querySelectorAll(".cimhatter");
             const leirashatter = document.querySelectorAll(".leirashatter");
             const cim = document.querySelectorAll(".cim");
+
             const leiras = document.querySelectorAll(".leiras");
         
         
@@ -206,11 +243,9 @@ function mode(){
                 navlink.classList.replace("navbar-light", "navbar-dark");
                 document.querySelector(".navbar").style.background = "linear-gradient(270deg, #626a75 0%, #333c47 100%)";
             
-                document.querySelector(".footercolumn").style.background = "linear-gradient(270deg, #626a75 0%, #333c47 100%)";
-                document.querySelector(".footercolumn").style.color = "whitesmoke";
-                document.getElementById("sor").style.borderColor = "whitesmoke";
 
                 cim.forEach(cim => {cim.style.color = "whitesmoke"});
+                document.querySelector(".focim").style.color  = "whitesmoke";
                 leiras.forEach(leiras => {leiras.style.color = "whitesmoke"});
                 cimhatter.forEach(function(cimhatter) {cimhatter.style.backgroundColor = 'rgba(51, 60, 71, 0.85)';});
                 leirashatter.forEach(function(leirashatter) {leirashatter.style.backgroundColor = 'rgba(51, 60, 71, 0.9)';});
@@ -236,11 +271,9 @@ function mode(){
                 navlink.classList.replace("navbar-dark", "navbar-light");
                 document.querySelector(".navbar").style.background = "linear-gradient(270deg, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%)";
 
-                document.querySelector(".footercolumn").style.background = "linear-gradient(270deg, rgb(230, 230, 206) 0%, rgb(165, 165, 150) 100%)";
-                document.querySelector(".footercolumn").style.color = "black";
-                document.getElementById("sor").style.borderColor = "black";
 
                 cim.forEach(cim => {cim.style.color = "black"});
+                document.querySelector(".focim").style.color  = "black";
                 leiras.forEach(leiras => {leiras.style.color = "black"});
                 cimhatter.forEach(function(cimhatter) {cimhatter.style.backgroundColor = "rgba(197, 197, 175, 0.85)";});
                 leirashatter.forEach(function(leirashatter) {leirashatter.style.backgroundColor = "rgba(197, 197, 175, 0.9)";});
@@ -248,4 +281,3 @@ function mode(){
             } 
     }   
 }
-
