@@ -1,5 +1,5 @@
 <div class="container">
-    <h1 class="fooldal"><span style="background-color: yellow; color: black;">A</span>utó<span style="background-color: red; color: white;">M</span>ánia</h1>
+    <h1 class="fooldal"><span style="background-color: red; color: white;">A</span>utó<span style="background-color: red; color: white;">M</span>ánia</h1>
     <p class="bevezeto">Üdvözöllek az autós blog oldalamon! Itt mindent megtalálsz, ami az autózással kapcsolatos: legfrissebb autómodellek bemutatása, autós történetek és még sok más. Célom, hogy segítsek az olvasóknak jobban megérteni az autókat és azokkal kapcsolatos legújabb fejlesztéseket. Fedezd fel az autóipar legújabb trendjeit, és légy mindig naprakész az autózással kapcsolatos információkkal! Legyen szó technológiai újításokról, biztonsági kérdésekről vagy egyszerűen csak autós élményekről, itt minden autós rajongó otthonra lelhet!</p>
 </div>
 <p class="adstart">Cikkajánló</p>

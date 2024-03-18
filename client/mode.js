@@ -89,6 +89,8 @@ function mode(){
             const bevezeto = document.querySelector(".bevezeto");
             const adstart = document.querySelector(".adstart");
             const adend = document.querySelector(".adend");
+            var span = document.querySelectorAll("span");
+
         
         if (storedValue === "Dark"){
         
@@ -97,6 +99,10 @@ function mode(){
             document.querySelector("#btn").style.backgroundColor = "#333c47";
         
             document.body.style.backgroundColor = "#1E2022";
+
+            span.forEach(span => {span.style.color = "black"});
+            span.forEach(span => {span.style.backgroundColor = "yellow"});
+         
         
             navbar.classList.replace("navbar-light", "navbar-dark");
             navlink.classList.replace("navbar-light", "navbar-dark");
@@ -129,6 +135,9 @@ function mode(){
             document.querySelector("#btn").style.backgroundColor = "rgb(197, 197, 175)";
         
             document.body.style.backgroundColor = "rgb(236, 235, 225)";
+            
+            span.forEach(span => {span.style.color = "white"});
+            span.forEach(span => {span.style.backgroundColor = "red"});         
         
             navbar.classList.replace("navbar-dark", "navbar-light");
             navlink.classList.replace("navbar-dark", "navbar-light");
