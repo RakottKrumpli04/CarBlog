@@ -12,10 +12,10 @@
   <a class="navbar-brand m-2">AutóMánia</a>
   <div class="navbar-collapse">
       <ul class="navbar-nav">
-        <li class="nav-item m-2">
+        <li class="nav-item m-2 item">
             <a class="nav-link" href="index.php" onclick="home()">Home</a>
         </li>
-        <li class="nav-item m-2">
+        <li class="nav-item m-2 item">
             <a class="nav-link" href="index.php?prog=cikkek.php" onclick="cikk()">Cikkek</a>
         </li>
       </ul>
@@ -37,9 +37,6 @@
     else 
       include 'fooldal.php';
     ?>
-
-
-
    
 <script src="mode.js"></script>
 <link rel="stylesheet" href="style.css">

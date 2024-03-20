@@ -18,7 +18,6 @@
     </div>
       <p class="fakeimg" style="height: 20px"></p>
   <script>
-    let i=0;
   getData('../server/marka.php', renderMarka);
   function renderMarka(data){
     for(let obj of data){

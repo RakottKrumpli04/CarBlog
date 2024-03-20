@@ -35,7 +35,6 @@ function cikk(){
 }
 function oldal() {
     localStorage.setItem("Page", "Oldal");
-
 }
 
 
@@ -52,6 +51,8 @@ document.getElementById("btn").addEventListener("click", function () {
         mode();
     }
 });
+
+
 window.addEventListener('resize', function() {
 
     var screenWidth = window.innerWidth;
@@ -76,6 +77,7 @@ function mode(){
     if(storedPage === "Home"){
 
 
+
             const elem = document.getElementById("btn");
             const storedValue = localStorage.getItem("Mode");
             const navbar = document.querySelector(".navbar");
@@ -89,11 +91,14 @@ function mode(){
             const bevezeto = document.querySelector(".bevezeto");
             const adstart = document.querySelector(".adstart");
             const adend = document.querySelector(".adend");
-            var span = document.querySelectorAll("span");
+            const span = document.querySelectorAll("span");
+            const cikkcolor = document.querySelectorAll(".cikkcolor");
+            const cikkcim = document.querySelectorAll(".cikkcim");
+            const cikkszoveg = document.querySelectorAll(".cikkszoveg");
+            const cikkgomb = document.querySelectorAll("#cikkgomb");
 
         
         if (storedValue === "Dark"){
-        
             elem.innerHTML = "Világos mód";
             elem.classList.replace("btn-outline-dark", "btn-outline-light");
             document.querySelector("#btn").style.backgroundColor = "#333c47";
@@ -123,6 +128,13 @@ function mode(){
             adstart.style.color = "whitesmoke";
             adstart.style.borderColor = "#333c47";
             adend.style.borderColor = "#333c47";
+
+            cikkcolor.forEach(function(cikkcolor) {cikkcolor.style.backgroundColor = 'rgba(51, 60, 71, 0.85)';});
+            cikkcim.forEach(function(cikkcim) {cikkcim.style.color = "whitesmoke";});
+            cikkszoveg.forEach(function(cikkszoveg) {cikkszoveg.style.color = "whitesmoke";});
+            cikkgomb.forEach(function(cikkgomb) {cikkgomb.style.backgroundColor = 'rgba(51, 60, 71, 0.85)';});
+            cikkgomb.forEach(function(cikkgomb) {cikkgomb.style.color = "whitesmoke";});
+            document.getElementById("cikkgomb").classList.replace("btn-outline-dark", "btn-outline-light");
 
 
         
@@ -158,6 +170,13 @@ function mode(){
             adstart.style.color = "black";
             adstart.style.borderColor = "rgb(197, 197, 175)";
             adend.style.borderColor = "rgb(197, 197, 175)";
+
+            cikkcolor.forEach(function(cikkcolor) {cikkcolor.style.backgroundColor = "rgba(197, 197, 175, 0.85)";});
+            cikkcim.forEach(function(cikkcim) {cikkcim.style.color = "black";});
+            cikkszoveg.forEach(function(cikkszoveg) {cikkszoveg.style.color = "black";});
+            cikkgomb.forEach(function(cikkgomb) {cikkgomb.style.backgroundColor = "rgba(197, 197, 175, 0.85)";});
+            cikkgomb.forEach(function(cikkgomb) {cikkgomb.style.color = "black";});
+            document.getElementById("cikkgomb").classList.replace("btn-outline-light", "btn-outline-dark");
         } 
     }
 
@@ -171,6 +190,9 @@ function mode(){
             const fakeimg = document.querySelectorAll(".fakeimg");
             const cikkelem = document.querySelectorAll(".cikkelem");
             const focim = document.querySelectorAll(".focim");
+            const cikkcim = document.querySelectorAll(".cikkcim");
+            const cikkszoveg = document.querySelectorAll(".cikkszoveg");
+            const cikkvissza = document.querySelectorAll("#cikkvissza");
 
 
 
@@ -190,6 +212,11 @@ function mode(){
             fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "#1E2022";});
             cikkelem.forEach(function(cikkelem) {cikkelem.style.color = "whitesmoke";});
             focim.forEach(function(focim) { focim.style.color = "whitesmoke"; });
+            cikkcim.forEach(function(cikkcim) {cikkcim.style.color = "whitesmoke";});
+            cikkszoveg.forEach(function(cikkszoveg) {cikkszoveg.style.color = "whitesmoke";});
+            cikkvissza.forEach(function(cikkvissza) {cikkvissza.style.backgroundColor = 'rgba(51, 60, 71, 0.85)';});
+            cikkvissza.forEach(function(cikkvissza) {cikkvissza.style.color = "whitesmoke";});
+            document.getElementById("cikkvissza").classList.replace("btn-outline-dark", "btn-outline-light");
 
 
         
@@ -210,6 +237,11 @@ function mode(){
             fakeimg.forEach(function(fakeimg) {fakeimg.style.backgroundColor = "rgb(236, 235, 225)";});
             cikkelem.forEach(function(cikkelem) {cikkelem.style.color = "black";});
             focim.forEach(function(focim) { focim.style.color = "black"; });
+            cikkcim.forEach(function(cikkcim) {cikkcim.style.color = "black";});
+            cikkszoveg.forEach(function(cikkszoveg) {cikkszoveg.style.color = "black";});
+            cikkvissza.forEach(function(cikkvissza) {cikkvissza.style.backgroundColor = "rgba(197, 197, 175, 0.85)";});
+            cikkvissza.forEach(function(cikkvissza) {cikkvissza.style.color = "black";});
+            document.getElementById("cikkvissza").classList.replace("btn-outline-light", "btn-outline-dark");
 
 
 

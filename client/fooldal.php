@@ -10,7 +10,7 @@
                 
                 for(let obj of data){
                     document.querySelector(".row").innerHTML+=`
-                    <a href="index.php?prog=cikkoldal.php&id=${obj.id}" class="col-md" onclick="oldal()">
+                    <a href="index.php?prog=cikkoldal.php&id=${obj.id}" class="col-xl" onclick="oldal()">
                       <div class="fade-card-main" tabIndex="0">
                           <div class="fade-card-front" style="background-image: url('${obj.borito}');">
                             <div class="leirashatter">
@@ -57,7 +57,30 @@
         </script>
 </div>
 <p class="adend"></p>
-<div class="footercolumn">
+<div class="cikk">
+  <div class="cikkcolor">
+    <div class="row cikkrow">
+      <div class="col-7 cikkcol">
+        <h5 class="cikkcim">Nem találtad meg a neked való cikket?</h5>
+        <p class="cikkszoveg">Ne aggódj, van még belőle és kedvedre böngészheted őket!</p>
+      </div>
+      <div class="col-5 cikkcol">
+        <button class="btn btn-outline-dark" id="cikkgomb">Mutasd a cikkeket!</button>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="fakeimg"></p>
+
+<div class="row footercolumn">
+  <div class="col">
     <h4 id="sor">Rólam</h4>
-    <p>asd</p>
-</div> 
+    <p id="rolam">Balogh Dávid vagyok, 19 éves, Kecskeméten születtem és itt élek azóta is. Mindig is imádtam az autókat. A hangjuk, a szabadság érzése az úton és az autók világa mindig izgatottá tett. Nekem az autók többek, mint csak közlekedési eszközök. Ezért döntöttem úgy, hogy összegyűjtöm ezeket a cikkeket, hogy megosszam másokkal a szenvedélyemet, az élményeimet és persze azokat az infókat, amik segíthetnek. Az autók formája, technológiája, a gyorsaság mind olyanok, amik szorosan összefonódnak velem, mintha egy izgalmas kaland részelemei lennének. Az autók világa számomra nem csak egy hobbi, hanem életem része, ami mindig tartogat új kihívásokat és boldog perceket.</p>
+  </div>
+</div>
+<script>
+  document.getElementById("cikkgomb").addEventListener("click", function () {
+    localStorage.setItem("Page", "Cikk");
+    window.location.href = "index.php?prog=cikkek.php";
+  });
+</script>

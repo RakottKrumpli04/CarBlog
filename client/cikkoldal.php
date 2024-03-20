@@ -24,7 +24,8 @@
                   <p class="fakeimg"></p>
                   <img src="${obj.kep3}" class="img" alt="">
                   <p class="fakeimg"></p>
-              `
+                  </div>
+                  `
       }
       const storedMode = localStorage.getItem("Mode");
       const cimhatter = document.querySelectorAll(".cimhatter");
@@ -37,6 +38,12 @@
 
 
 
+      document.getElementById("cikkvissza").addEventListener("click", function () {
+        localStorage.setItem("Page", "Cikk");
+        window.location.href = "index.php?prog=cikkek.php";
+      });
+
+
       if (storedMode === "Dark") {
 
         cim.forEach(cim => { cim.style.color = "whitesmoke" });
@@ -45,12 +52,11 @@
         leirashatter.forEach(function(leirashatter) { leirashatter.style.backgroundColor = 'rgba(51, 60, 71, 0.9)'; });
         fakeimg.forEach(function(fakeimg) { fakeimg.style.backgroundColor = "#1E2022"; });
         cikkelem.forEach(function(cikkelem) { cikkelem.style.color = "whitesmoke"; });
-        focim.forEach(function(focim) { focim.style.color = "whitesmoke"; });
+        focim.forEach(function(focim) { focim.style.color = "whitesmoke"; })
+      } 
 
 
-
-
-      } else if (storedMode === "Light") {
+      else if (storedMode === "Light") {
 
         cim.forEach(cim => { cim.style.color = "black" });
         leiras.forEach(leiras => { leiras.style.color = "black" });
@@ -59,13 +65,19 @@
         fakeimg.forEach(function(fakeimg) { fakeimg.style.backgroundColor = "rgb(236, 235, 225)"; });
         cikkelem.forEach(function(cikkelem) { cikkelem.style.color = "black"; });
         focim.forEach(function(focim) { focim.style.color = "black"; });
-
-
-
-
-
-
       }
     }
   </script>
+
 </div>
+<div style="margin: auto; width: 70%;">
+  <div class="row">
+    <div class="col-9">
+      <p class="cikkszoveg">A cikk végére értél! Olvasnál még?</p>
+    </div>
+    <div class="col-3 cikkcol">
+      <button class="btn btn-outline-dark" id="cikkvissza">Mutass még cikkeket!</button>
+    </div>
+  </div>
+</div>
+<p class="fakeimg"></p>
