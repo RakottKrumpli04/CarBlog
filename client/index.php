@@ -38,7 +38,10 @@
     else 
       include 'fooldal.php';
     ?>
-   
+
+<script>
+  localStorage.setItem("Mode", "Light");
+</script>
 <script src="mode.js"></script>
 <link rel="stylesheet" href="style.css">
 </body>

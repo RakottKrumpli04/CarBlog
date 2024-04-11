@@ -37,22 +37,6 @@ function oldal() {
     localStorage.setItem("Page", "Oldal");
 }
 
-
-document.getElementById("btn").addEventListener("click", function () {
-
-    const storedValue = localStorage.getItem("Mode");
-    if(storedValue == "Dark"){
-        localStorage.setItem("Mode", "Light");
-        mode();
-    }
-
-    else if(storedValue == "Light"){
-        localStorage.setItem("Mode", "Dark");
-        mode();
-    }
-});
-
-
 window.addEventListener('resize', function() {
 
     var screenWidth = window.innerWidth;
@@ -68,6 +52,19 @@ window.addEventListener('resize', function() {
     }
 });
 
+document.getElementById("btn").addEventListener("click", function () {
+
+    const storedValue = localStorage.getItem("Mode");
+    if(storedValue == "Dark"){
+        localStorage.setItem("Mode", "Light");
+        mode();
+    }
+
+    else if(storedValue == "Light"){
+        localStorage.setItem("Mode", "Dark");
+        mode();
+    }
+});
 
 
 function mode(){
