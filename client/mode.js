@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         navbar.classList.add('fixed-top');
         document.getElementById('ures').style.display = 'block';
     }
-
+    location.replace();
 
 
     const storedMode = localStorage.getItem("Mode");
